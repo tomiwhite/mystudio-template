@@ -1,0 +1,27 @@
+{
+  "name": "Node.js & TypeScript",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+  "forwardPorts": [3001, 5173],
+  "postCreateCommand": "npm install",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "chat.instructionsFilesLocations": {
+          ".github/copilot-instructions.md": true
+        },
+        "chat.tools.terminal.autoApprove": {
+          "npm install": true,
+          "git add": true,
+          "git commit": true,
+          "git push": true
+        }
+      }
+    }
+  }
+}
