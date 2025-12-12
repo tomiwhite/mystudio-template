@@ -1,0 +1,37 @@
+﻿{
+    "name":  "mystudio",
+    "version":  "1.0.0",
+    "description":  "",
+    "main":  "index.js",
+    "directories":  {
+                        "doc":  "docs"
+                    },
+    "scripts":  {
+                    "type-check":  "tsc --noEmit",
+                    "lint":  "eslint . --ext .ts,.tsx",
+                    "build":  "next build",
+                    "dev":  "next dev",
+                    "start":  "next start"
+                },
+    "keywords":  [
+
+                 ],
+    "author":  "",
+    "license":  "ISC",
+    "type":  "commonjs",
+    "dependencies":  {
+                         "next":  "^16.0.10",
+                         "react":  "^19.2.3",
+                         "react-dom":  "^19.2.3",
+                         "typescript":  "^5.9.3"
+                     },
+    "devDependencies":  {
+                            "@types/node":  "^25.0.1",
+                            "@types/react":  "^19.2.7",
+                            "autoprefixer":  "^10.4.22",
+                            "eslint":  "^9.39.1",
+                            "eslint-config-next":  "^16.0.10",
+                            "postcss":  "^8.5.6",
+                            "tailwindcss":  "^4.1.18"
+                        }
+}
