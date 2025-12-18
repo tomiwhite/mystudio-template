@@ -1,8 +1,20 @@
 {
   "name": "Node.js & TypeScript",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
-  "forwardPorts": [3001, 5173],
+  "forwardPorts": [3001],
+  "containerEnv": {
+    "NPM_CONFIG_CACHE": "P:\\_CACHE\\npm",
+    "UV_CACHE_DIR": "P:\\_CACHE\\uv",
+    "PIP_CACHE_DIR": "P:\\_CACHE\\pip",
+    "OLLAMA_MODELS": "P:\\_AI_MODELS"
+  },
   "postCreateCommand": "npm install",
+  "mounts": [
+    "source=P:\\_CACHE\\npm,target=/workspaces/.npm,type=bind",
+    "source=P:\\_CACHE\\uv,target=/workspaces/.uv,type=bind",
+    "source=P:\\_CACHE\\pip,target=/workspaces/.pip,type=bind",
+    "source=P:\\_AI_MODELS,target=/workspaces/.ai_models,type=bind"
+  ],
   
   "customizations": {
     "vscode": {

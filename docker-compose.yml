@@ -1,0 +1,21 @@
+﻿services:
+  mystudio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mystudio-app
+    ports:
+      - "3001:3000"
+    environment:
+      NODE_ENV: development
+      NPM_CONFIG_CACHE: /app/.npm
+      OLLAMA_MODELS: /app/.ai_models
+      UV_CACHE_DIR: /app/.uv
+      PIP_CACHE_DIR: /app/.pip 
+    volumes:
+      - .:/app
+      - P:\_CACHE\npm:/app/.npm
+      - P:\_AI_MODELS:/app/.ai_models
+      - P:\_CACHE\uv:/app/.uv
+      - P:\_CACHE\pip:/app/.pip
+    restart: unless-stopped
